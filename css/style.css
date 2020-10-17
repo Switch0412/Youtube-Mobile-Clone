@@ -1,0 +1,238 @@
+:root {
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --red-color: #ff0000;
+    --blue-color: #045fd4;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    
+    /* Size */
+    --padding: 1rem;
+    --icon-size: 1.5rem;
+    --avatar-size: 3rem;
+    --action-button-size: 3.5rem;
+
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Black Han Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Black Han Sans", sans-serif;
+    background-color: var(--white-color);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo {
+    font-size: var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+/* Video Section */
+.player {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    line-height: 0;
+    background-color: var(--grey-dark-color);
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    border: 0;
+}
+
+video:active {
+    border: none;
+}
+
+body > .info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .metadata .titleAndButton .title {
+    margin-right: var(--padding);
+    font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.info .metadata .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .actions {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+
+.info .actions button {
+    display: flex;
+    flex-direction: column;
+    width: var(--action-button-size);
+    height: var(--action-button-size);
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .actions button i {
+    margin: auto;
+    font-size: var(--icon-size);
+}
+
+.info .actions button span {
+    margin: auto;
+}
+
+.info .actions button i.active {
+    color: var(--blue-color);
+}
+
+/* Channel Description */
+.info .channel {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding) 0;
+    border-width: 2px 0px;
+    border-style: solid;
+    border-color: var(--grey-light-color);
+}
+
+.info .channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.info .channel .metadata img {
+    margin-right: var(--padding);
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.info .channel .metadata .channel-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info .channel .metadata .channel-info .name {
+    font-size: var(--font-medium);
+}
+
+.info .channel .metadata .channel-info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .channel .subscribe {
+    text-transform: uppercase;
+    font-size: var(--font-medium);
+    color: var(--red-color);
+}
+
+/* Up Next Section */
+.upNext {
+    padding: 0 var(--padding);
+}
+
+.upNext span.upNext-title {
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+}
+
+.upNext span.title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.upNext .item .img-container {
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+
+.upNext .item .img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.upNext .item .info {
+    flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+    flex: 1 1 5%;
+}
+
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
